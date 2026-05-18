@@ -7,22 +7,22 @@ import MovieDetails from './MovieDetails';
 
 export default function Movie() {
 
-  const [shows, setShows] = useState([]);
-  const [selectedShow, setSelectedShow] = useState(null);
+  let [shows, setShows] = useState([]);
+  let [selectedShow, setSelectedShow] = useState(null);
 
   // search show
-  const searchShow = async (name) => {
-    const res = await fetch
+  let searchShow = async (name) => {
+    let res = await fetch
     (`https://api.tvmaze.com/search/shows?q=${name}`);
     const data = await res.json();
     setShows(data);
   };
 
   // get full details
-  const getShowDetails = async (id) => {
-    const res = await fetch
+  let getShowDetails = async (id) => {
+    let res = await fetch
     (`https://api.tvmaze.com/shows/${id}`);
-    const data = await res.json();
+    let data = await res.json();
     setSelectedShow(data);
   };
 
