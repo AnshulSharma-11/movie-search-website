@@ -14,7 +14,7 @@ export default function Movie() {
   let searchShow = async (name) => {
     let res = await fetch
     (`https://api.tvmaze.com/search/shows?q=${name}`);
-    const data = await res.json();
+    let data = await res.json();
     setShows(data);
   };
 
