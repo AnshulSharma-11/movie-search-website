@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 
 export default function SearchBar({ searchShow }) {
 
-  const [text, setText] = useState("");
+  let [text, setText] = useState("");
 
-  const handleSubmit = (e) => {
+  let handleSubmit = (e) => {
     e.preventDefault();
     searchShow(text);
   };
