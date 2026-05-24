@@ -6,7 +6,7 @@ export default function MovieDetails({ show, setSelectedShow }) {
 
       <button onClick={() => setSelectedShow(null)}>Close</button>
 
-      <h2>{show.name}</h2>
+      <h3>{show.name}</h3>
 
       <img
         src={
@@ -17,10 +17,10 @@ export default function MovieDetails({ show, setSelectedShow }) {
         alt={show.name}
       />
 
-      <p><b>Language:</b> {show.language}</p>
-      <p><b>Genres:</b> {show.genres.join(", ")}</p>
-      <p><b>Status:</b> {show.status}</p>
-      <p><b>Rating:</b> ⭐ {show.rating.average || "N/A"}</p>
+      <p><b>Language :</b> {show.language}</p>
+      <p><b>Genres :</b> {show.genres.join(", ")}</p>
+      <p><b>Status :</b> {show.status}</p>
+      <p><b>Rating :</b> ⭐ {show.rating.average || "N/A"}</p>
 
       <p
         dangerouslySetInnerHTML={{ __html: show.summary }}
